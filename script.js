@@ -44,4 +44,14 @@ document.getElementById('uploadFile').addEventListener('click', function() {
     } else {
         alert("Please select a file to upload.");
     }
+
 });
+const books = [
+       // ...previous books
+       { 
+           title: "New Book", 
+           author: "Author Name", 
+           cover: "images/new-cover.jpg", 
+           file: "books/new-book.pdf" 
+       }
+   ];
