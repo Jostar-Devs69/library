@@ -1,0 +1,112 @@
+:root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --dark: #54208f;
+            --light: #553163;
+        }
+
+        body {
+      --bg:#164bc7;         /* slate-900 */
+      --panel:#111407;      /* gray-900 */
+      --muted:#282c15;      /* gray-800 */
+      --card:#121409;       /* deep */
+      --primary:#3b82f6;    /* blue-500 */
+      --accent:#22c55e;     /* green-500 */
+      --text:#ebe5e9;       /* gray-200 */
+      --text-dim:#9ca3af;   /* gray-400 */
+      --danger:#ef4444;     /* red-500 */
+      --warn:#f59e0b;       /* amber-500 */
+      --radius:16px;
+      --shadow:0 10px 25px rgba(20, 22, 9, 0.4);
+
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .featured-book {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 70vh;
+            position: relative;
+        }
+        .featured-book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .featured-book > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-book {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/ucspweek1definitionofcsp-240330142758-9c54b955-thumbnail.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        .search-bar {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .category-badge {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        .category-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .collection-card {
+            transition: transform 0.3s ease;
+        }
+        .collection-card:hover {
+            transform: translateY(-5px);
+        }
+        .collection-card img {
+            transition: transform 0.3s ease;
+        }
+        .collection-card:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .featured-book {
+                min-height: 350px;
+            }
+        }
+        .search-input {
+    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: rgb(255, 255, 255); /* Set a light background color */
+    color: black; /* Set text color to black for visibility */
+}
+
+.search-input:focus {
+    background-color: #e0f7fa; /* Change this to your desired color */
+    outline: none; /* Remove default outline */
+    color: black; /* Ensure text color remains visible */
+}
